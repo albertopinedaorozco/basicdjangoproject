@@ -8,7 +8,7 @@ pylint = "*"
 
 [packages]
 django = "==2.1"
-
+pymysql = "*"
 
 [requires]
 python_version = "3.7"
