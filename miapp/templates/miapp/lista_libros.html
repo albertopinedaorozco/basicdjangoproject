@@ -1,25 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-        <h1>Biblioteca</h1>
-
-        <nav>
-            <ul>
-                <li><a href= "{% url 'inicio' %}"> Inicio </a></li>
-                <li><a href= "{% url 'listar_libros' %}"> Libros </a></li>
-                <li><a href= "#"> Ejemplares </a></li>
-                <li><a href= "#"> Prestamos </a></li>
-                <li><a href= "#"> Iniciar sesión </a></li>
-            </ul>
-        </nav>
-
+{% block principal %}
     <h2>Listado de libros</h2>
 
     <table>
@@ -45,7 +26,6 @@
     </table>
    
 
-    <a href="#">Nuevo Libro</a>
+    <a href="{% url 'nuevo_libro' %}">Nuevo Libro</a>
+{% endblock %}
 
-</body>
-</html>
