@@ -2,13 +2,39 @@
 
 {% block principal %}
 
-    <form action="#" method="post">
-        {% csrf_token %}
+<h2>Nuevo libro</h2>
+<hr>
+   
+<div id="formdiv">
 
-        {{ form.as_p }}
+        <form  action="#" method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                  <label for="id_nombre">Nombre</label>
+                  <input type="text" class="form-control" id="id_nombre" placeholder="Digite el nombre del libro">
+                </div>
+                <div class="form-group">
+                  <label for="id_descripcion">Descripción</label>
+                  <textarea  class="form-control" name="id_descripcion" id="id_descripcion" cols="30" rows="10"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="id_isbn">Isbn</label>
+                    <input type="text" class="form-control" id="id_isbn" placeholder="Digite el codigo ISBN del libro">
+                </div>
+                <div class="form-group">
+                    <label for="id_copias">Copias</label>
+                    <input type="number" class="form-control" id="id_copias" placeholder="Digite el numero de copias">
+                </div>
+    
+                <div style="text-align: center;">
+                        <button type="submit" class="btn btn-success">Enviar </button>
+                </div>
+                
+        </form>
+    </div>
 
-        <button type="submit">Enviar </button>
-
-    </form>
+   
 
 {% endblock %}
+
+

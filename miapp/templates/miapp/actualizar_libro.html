@@ -3,11 +3,19 @@
 
 {% block principal %}
 
-<form action="#" method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Actualizar datos</button>
+<h2>Actualizar libro</h2>
+<hr>
+   
+<div id="formdiv">
+    <form action="#" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Actualizar datos</button>
+        
+    </form>
 
-</form>
+</div>
+
+     
 
 {% endblock %}

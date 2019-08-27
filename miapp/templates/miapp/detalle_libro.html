@@ -3,10 +3,19 @@
 {% block principal %}
 
 <h2>Detalle de libro</h2>
+<hr>
 
- <p>Libro: {{ object.nombre }}</p>
- <p>Descripción: {{ object.descripcion }}</p>
- <p>ISBN: {{ object.isbn }}</p>
- <p>Copias: {{ object.copias }}</p>
+<div id="formdiv">
+        <div class="card bg-light mb-3" style="max-width: 40rem;">
+                <div class="card-header"><h5 class="card-title">{{ object.nombre }} </h5></div>
+                <div class="card-body">
+                  <p><strong>Descripción:</strong>
+                       {{ object.descripcion }}</p>
+                  <p><strong>ISBN:</strong> {{ object.isbn }}</p>
+                  <p><strong>Copias:</strong> {{ object.copias }}</p>
+        </div>
+</div>
+
+
 
 {% endblock  %}

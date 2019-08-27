@@ -1,0 +1,87 @@
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    background: #62D9B7;
+    color: white;
+    border-radius: 10px;
+}
+
+header h1{
+    font-size: 2em;
+    margin-left:8em;
+    padding-top:1.5em;
+}
+header img{
+    border-radius: 30%;
+    float: left;
+    margin-left: 3em;
+    margin-top: 0.5em;
+}
+
+header nav{
+    background: #A0BF30;
+    padding: 1em 1em;
+}
+
+header nav ul {
+    list-style: none;
+    margin-left: 10em;
+   /* border: 1px solid red;*/
+}
+
+header nav ul li{
+    display: inline-block;
+    margin-right: 1.5em;
+}
+header nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+header nav ul li a:hover{
+    text-decoration: none;
+    color: gray;
+    
+}
+main{
+    padding: 2em;
+    background: #F2F2F2;
+}
+
+h2{
+    color: #F2AC29;
+    text-align: center;
+}
+.nombrelibro{
+    color: gray;
+    
+
+}
+
+table tr th a:hover{
+    text-decoration: none;
+}
+
+#formdiv{
+    width: 50%;
+    margin: 0 auto;
+}
+
+footer{
+    background: #F28E13;
+    height: 4em;
+    margin-bottom: 1em;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+footer p{
+    color: white;
+    text-align: center;
+    font-size: 1.3em;
+    padding-top: 0.5em;
+}
