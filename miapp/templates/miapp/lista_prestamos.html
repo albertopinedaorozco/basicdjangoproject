@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block principal %}
+
+
+    <h2>Listado de prestamos <a href="{% url 'nuevo_prestamo' %}" class="btn-sm btn-primary">Nuevo prestamo</a> </h2>
+    <hr>
+    <table class="table table-hover">
+        <thead>
+                <tr>
+                     <th scope="col">Fecha prestamo - Cliente</th>
+                     <th scope="col">Telefono cliente</th>
+                     <th scope="col">estado</th>
+                     
+                     
+                </tr>
+
+        </thead>
+        <tbody>
+                {% for prestamo in object_list  %}
+                    <tr>
+                        <th scope="row"><a href="#"><span class="nombrelibro"> {{ prestamo.fechaprestamo }}, {{ prestamo.nombre_cliente }} </span>  </a></th>
+                        <td>{{ prestamo.telefono }}</td>
+                        <td>{{ prestamo.estado }}</td>
+                        <td><a href="#" class="btn btn-warning a-btn-slide-text">
+                                <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                                <span><strong>Editar</strong></span>            
+                            </a></td>
+                        <td><a href="#" class="btn btn-danger a-btn-slide-text">
+                                    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                                    <span><strong>Borrar</strong></span>            
+                        </a></td>
+                        
+                        
+                    </tr>
+                {% endfor %}
+
+        </tbody>
+        
+
+    </table>
+   
+    
+    
+{% endblock %}
