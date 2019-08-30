@@ -22,11 +22,17 @@
                         <h1>Biblioteca shiotmele's</h1>
                         <nav>
                             <ul>
+                                
                                 <li><a href= "{% url 'inicio' %}"> Inicio </a></li>
                                 <li><a href= "{% url 'listar_libros' %}"> Libros </a></li>
                                 <li><a href= "{% url 'listar_ejemplares' %}"> Ejemplares </a></li>
-                                <li><a href= "{% url 'listar_prestamos' %}"> Prestamos </a></li>
-                                <li><a href= "{% url 'login' %}"> Iniciar sesión </a></li>
+                                {% if user.is_authenticated %}
+                                    <li><a href= "{% url 'listar_prestamos' %}"> Prestamos </a></li>
+                                    <li><a href= "{% url 'logout' %}"> Cerrar sesión </a></li>
+                                {% else %}
+                                    <li><a href= "{% url 'login' %}"> Iniciar sesión </a></li>
+                                {% endif %}
+                                
 
                                 <li> {{ user.username }} </li>
                             </ul>

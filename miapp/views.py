@@ -14,6 +14,8 @@ from .forms import PrestamoForm,DetallePrestamoFormSet
 from django.http import HttpResponseRedirect
 
 from django.contrib.auth.views import LoginView, LogoutView
+from django.contrib.auth.mixins import LoginRequiredMixin
+
 
 def cargar_inicio(request):
     return render(request, "miapp/index.html")
@@ -26,7 +28,8 @@ class LibroDetalle(DetailView):
     model = Libro
     template_name = 'miapp/detalle_libro.html'
 
-class LibroCreate(CreateView):
+
+class LibroCreate(LoginRequiredMixin,CreateView):
     model = Libro
     fields = ['nombre','descripcion','isbn','copias']
     template_name = 'miapp/nuevo_libro.html'
